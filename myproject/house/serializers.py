@@ -4,7 +4,6 @@ from rest_framework_simplejwt.tokens import RefreshToken
 from django.contrib.auth import authenticate
 
 
-
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = UserProfile
@@ -60,7 +59,7 @@ class PropertySerializers(serializers.ModelSerializer):
     class Meta:
         model = Property
         fields = ['id', 'title', 'transaction_type', 'property_type', 'document_type', 'region', 'condition_type',
-                  'city', 'description', 'district', 'address', 'area', 'price', 'floor', 'total_floors'
+                  'city', 'description', 'district', 'address', 'area', 'price', 'floor', 'total_floors',
                   'images', 'seller']
 
 
@@ -86,3 +85,5 @@ class DistrictSerializers(serializers.ModelSerializer):
     class Meta:
         model = District
         fields = '__all__'
+
+
